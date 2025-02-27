@@ -1,13 +1,6 @@
-# theme-haus
-
-
-
-## omg.lol CSS
-
----
-
-
 # Theme Haus
+
+![img](logo.jpg)
 
 **Theme Haus** is a collection of **CSS themes and templates** designed for improved **readability, aesthetics, and usability** across various platforms. This repository serves as a central hub for managing and sharing stylesheets, templates, and design resources.
 
