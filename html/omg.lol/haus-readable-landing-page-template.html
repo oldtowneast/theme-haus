@@ -1,0 +1,38 @@
+Type: Template
+Title: Landing Page Template
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{weblog-title}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{feeds}
+<style>
+@import url('https://oldtowneast.github.io/theme-haus/css/omg.lol/haus-readable.css');
+</style>
+</head>
+<body>
+
+<header>
+	<h1 class="weblog-title"><a href="{base-path}">{weblog-title}</a></h1>
+	{navigation}
+</header>
+
+<main>
+
+{body}
+
+<nav>
+{previous-page}
+{next-page}
+</nav>
+
+</main>
+
+<footer>
+	<p>Made with <a href="https://weblog.lol">weblog.lol</a>.</p>
+</footer>
+
+</body>
+</html>

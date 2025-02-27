@@ -1,4 +1,8 @@
-/* Theme: Haus Readable - A Readability-Focused Theme for Theme Haus */
+/* Theme: Haus Readable - A Readability-Focused Theme for omg.lol */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap'); */
+@import url(https://fonts.bunny.net/css?family=inter:300,400,600);
+
 
 :root {
     --foreground: #333;
@@ -21,7 +25,7 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.2em;
     line-height: 1.8;
     color: var(--foreground);
