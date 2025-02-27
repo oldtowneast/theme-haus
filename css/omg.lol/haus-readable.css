@@ -1,0 +1,97 @@
+/* Theme: Haus Readable - A Readability-Focused Theme for Theme Haus */
+
+:root {
+    --foreground: #333;
+    --background: #f9f9f9;
+    --link: #0056b3;
+    --accent: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground: #eee;
+        --background: #1c1c1c;
+        --link: #82caff;
+        --accent: #aaa;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: var(--foreground);
+    background: var(--background);
+    margin: 0;
+    padding: 2em;
+}
+
+header, main, footer {
+    max-width: 42em;
+    margin: auto;
+    padding: 1em;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.weblog-title a {
+    text-decoration: none;
+    color: var(--foreground);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--link);
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+p, li {
+    line-height: 1.8;
+}
+
+article {
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--accent);
+    margin-bottom: 2em;
+}
+
+.post-info, .post-tags {
+    font-size: 0.9em;
+    color: var(--accent);
+    text-align: right;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 3em;
+}
+
+a:link { color: var(--link); }
+a:visited { color: var(--link); }
+a:hover { text-decoration: underline; }
