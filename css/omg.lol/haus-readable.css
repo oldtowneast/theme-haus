@@ -1,9 +1,8 @@
 /* Theme: Haus Readable - A Readability-Focused Theme for omg.lol */
 
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap'); */
-/* @import url(https://fonts.bunny.net/css?family=inter:300,400,600); */
+@import url(https://fonts.bunny.net/css?family=inter:300,400,600);
 
-@import url(https://fonts.bunny.net/css?family=gentium-plus:400,700|inter:300,400,600);
 
 :root {
     --foreground: #333;
@@ -46,8 +45,7 @@ header {
     margin-bottom: 2em;
 }
 
-.weblog-title a, h1 {
-    font-family: 'Gentium Plus', serif;
+.weblog-title a {
     text-decoration: none;
     color: var(--foreground);
     font-size: 2em;
@@ -71,7 +69,7 @@ nav a {
     font-weight: bold;
 }
 
-h2, h3 {
+h1, h2, h3 {
     font-weight: bold;
     margin-top: 1.5em;
 }
