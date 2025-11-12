@@ -1,0 +1,461 @@
+/* Tyler was here. Exported from BearBlog on Monday, July 14, 2025 11:36  */
+
+/*@import url(https://fonts.bunny.net/css?family=inter:300,400,600,700);*/
+
+/* @import url(https://fonts.bunny.net/css?family=anybody:400,700|fira-code:400,700|inconsolata:400,700|inter:300,400,600,700|inter-tight:400,700|jetbrains-mono:400,700|jost:400,700|m-plus-1:300,400,600,700|prompt:400,700|public-sans:400,700); */
+
+@import url(https://fonts.bunny.net/css?family=fira-code:400,700|inconsolata:400,700|inter:300,400,600,700|inter-tight:400,700|jetbrains-mono:400,700);
+
+
+/* 
+font-family: 'Anybody', display;
+font-family: 'Fira Code', monospace;
+font-family: 'Inconsolata', monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Inter Tight', sans-serif;
+font-family: 'JetBrains Mono', monospace;
+font-family: 'Jost', sans-serif;
+font-family: 'M PLUS 1', sans-serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Public Sans', sans-serif;
+*/
+
+:root {
+    --width: 720px;
+/*     --font-main: Verdana, sans-serif; */
+  	--font-main: 'Inter Tight', sans-serif;
+    --font-secondary: 'Inter Tight', sans-serif;
+    --font-benjamin: 'JetBrains Mono', monospace;
+    --font-scale: 1.15em;
+    --background-color: #f9f9f9;
+    --heading-color: #2a2a2a;
+    --text-color: #4a4a4a;
+    --link-color: #5a8ecb;         /* Muted steel blue pop */
+    --visited-color: #9c80c1;      /* Desaturated lavender pop */
+    --code-background-color: #ededed;
+    --code-color: #2a2a2a;
+    --blockquote-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #111;
+        --heading-color: #ddd;
+        --text-color: #bbb;
+        --link-color: #6ea8e0;      /* Icy blue for contrast in dark */
+        --visited-color: #b99bd3;   /* Dusty purple */
+        --code-background-color: #1a1a1a;
+        --code-color: #ccc;
+        --blockquote-color: #aaa;
+    }
+}
+
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+nav a {
+    margin-right: 8px;
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+time {
+ 	font-family: monospace;
+  	font-style: normal;
+  	font-size: 15px;
+}
+
+main {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight, .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* blog post list */
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+@media (max-width: 480px) {
+    ul.blog-posts li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul.blog-posts li span {
+        text-align: left;
+        width: auto;
+        margin-bottom: 0.25em;
+    }
+}
+
+
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+/* external link marker */
+a[href^="http"]:where(:not([href*="wmprkr.foo/"])):not(:has(img))::after {
+    content: "↗"
+}
+
+/* Button */
+.benjamin a {
+    display: inline-block;
+    --font-benjamin: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--link-color); /* Keeps your link color consistent */
+    padding: 2px 4px; /* Subtle padding to give it some space */
+    /* border-bottom: 1px dashed var(--link-color); */ /* Underline with a twist */
+    border-radius: 3px; /* Tiny round on edges */
+    transition: all 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .benjamin a::before {
+    content: " 📨"; /* Keeping your little envelope */
+    padding-right: 2px;;
+    :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #f9f9f9;
+    --heading-color: #2a2a2a;
+    --text-color: #4a4a4a;
+    --link-color: #5a8ecb;         /* Muted steel blue pop */
+    --visited-color: #9c80c1;      /* Desaturated lavender pop */
+    --code-background-color: #ededed;
+    --code-color: #2a2a2a;
+    --blockquote-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #111;
+        --heading-color: #ddd;
+        --text-color: #bbb;
+        --link-color: #6ea8e0;      /* Icy blue for contrast in dark */
+        --visited-color: #b99bd3;   /* Dusty purple */
+        --code-background-color: #1a1a1a;
+        --code-color: #ccc;
+        --blockquote-color: #aaa;
+    }
+}
+
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+nav a {
+    margin-right: 8px;
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+time {
+ 	font-family: monospace;
+  	font-style: normal;
+  	font-size: 15px;
+}
+
+main {
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight, .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* blog post list */
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+@media (max-width: 480px) {
+    ul.blog-posts li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul.blog-posts li span {
+        text-align: left;
+        width: auto;
+        margin-bottom: 0.25em;
+    }
+}
+
+
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+/* Button */
+.benjamin a {
+    display: inline-block;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--link-color); /* Keeps your link color consistent */
+    padding: 2px 4px; /* Subtle padding to give it some space */
+    /* border-bottom: 1px dashed var(--link-color); */ /* Underline with a twist */
+    border-radius: 3px; /* Tiny round on edges */
+    transition: all 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .benjamin a::before {
+    content: " 📨"; /* Keeping your little envelope */
+    padding-right: 2px;
+    font-style: normal;
+  }
+  
+  .benjamin a:hover {
+    color: var(--accent-color); /* Changes text color on hover */
+    /* border-bottom: 1px dashed var(--accent-color); */ /* Changes underline color on hover */
+    background-color: rgba(0, 0, 0, 0.05); /* Faint background on hover */
+  }
+  
+  /* Tyler was here - Monday, November  4, 2024 11:07 */
+  .benjamin {
+    padding-bottom: 9px !important;
+    font-family: var(--font-secondary);
+    font-size: .9em;
+    font-style: italic;
+  }
+    .upvote-button {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background-color: inherit;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .upvote-button.upvoted {
+        color: salmon;
+    }
+    .upvote-count {
+        margin-top: -3px;
+    }
+.tags a {
+  font-size: 0.8em;
+}
+
+.metas {
+  font-family: var(--font-secondary);
+  font-size: .em;
+}
+  }
+  
+  .benjamin a:hover {
+    color: var(--accent-color); /* Changes text color on hover */
+    /* border-bottom: 1px dashed var(--accent-color); */ /* Changes underline color on hover */
+    background-color: rgba(0, 0, 0, 0.05); /* Faint background on hover */
+  }
+  
+  /* Tyler was here - Monday, November  4, 2024 11:07 */
+  .benjamin {
+    padding-bottom: 9px !important;
+    font-family: var(--font-benjamin);
+    font-size: .75em;
+  }
+    .upvote-button {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background-color: inherit;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .upvote-button.upvoted {
+        color: salmon;
+    }
+    .upvote-count {
+        margin-top: -3px;
+    }
+.tags a {
+  font-size: 0.8em;
+}
+
+.metas {
+  font-family: var(--font-secondary);
+  font-size: 0.85em;
+}
